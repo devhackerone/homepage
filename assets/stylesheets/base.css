@@ -1037,3 +1037,8 @@ footer {
   align-items: center;
   align-content: center;
 }
+
+.img {
+  height: auto;
+  width: 100%;
+}
