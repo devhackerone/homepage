@@ -507,6 +507,7 @@ article {
 }
 .avatar {
   position: relative;
+  width: 140%;
   max-width: 15rem;
   display: block;
   flex: 1 0 auto;
