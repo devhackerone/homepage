@@ -1,30 +1,35 @@
 ::-moz-selection {
   background: yellow;
 }
+
 ::selection {
   background: yellow;
 }
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
+
 html {
   font-size: 14px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
   box-sizing: border-box;
 }
+
 html,
 body {
   margin: 0;
   line-height: 1.4285em;
   color: rgba(0, 0, 0, 0.87);
 }
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -35,6 +40,13 @@ h5 {
   font-weight: bold;
   padding: 0;
 }
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
 h1:last-child,
 h2:last-child,
 h3:last-child,
@@ -42,80 +54,93 @@ h4:last-child,
 h5:last-child {
   margin-bottom: 0;
 }
-h1,
-h2,
-h3 {
-  text-transform: uppercase;
-}
+
 h1 {
   font-weight: 900;
   font-size: 1.5rem;
   margin-bottom: 0;
 }
+
 h2 {
   font-weight: 900;
   font-size: 3rem;
   letter-spacing: 0.25em;
 }
+
 h2 + p {
   font-weight: 300;
   font-size: 1.5rem;
   margin-bottom: 0.25em;
 }
+
 h3 {
   font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: 0.15em;
 }
+
 h4 {
   font-size: 1.125rem;
 }
+
 h5 {
   font-size: 1rem;
 }
+
 h6 {
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin: 0 0 1em 0;
 }
+
 section {
   padding: 1em 0;
 }
+
 p {
   margin: 0 0 1em;
   line-height: 1.4285em;
 }
+
 p:first-child {
   margin-top: 0;
 }
+
 p:last-child {
   margin-bottom: 0;
 }
+
 strong {
   font-weight: 600;
 }
+
 small {
   font-size: 80%;
 }
+
 ul, ol {
   list-style: none outside none;
   padding-left: 1.5em;
 }
+
 ol {
   counter-reset: ol-counter;
 }
+
 li {
   list-style: none outside none;
 }
+
 ul > li:before {
   content: "●";
-  font-family: "Arial";
+  font-family: "Arial", serif;
   float: left;
   width: 1.5em;
   margin-left: -1.5em;
   text-align: center;
 }
+
 ol > li:before {
   content: counter(ol-counter);
   counter-increment: ol-counter;
@@ -132,6 +157,7 @@ ol > li:before {
   justify-content: center;
   margin-left: calc(-1.5rem + 0.4285rem / 2);
 }
+
 ol.inverted > li:before {
   background: black;
   color: white;
@@ -140,11 +166,13 @@ ol.inverted > li:before {
   line-height: 1rem;
   margin-top: calc(0.4285rem / 2);
 }
+
 a {
   color: blue;
   background-color: transparent;
   text-decoration: none;
 }
+
 a[rel="external"]:not(.label):hover,
 a.language:hover span {
   text-decoration: underline;
@@ -158,9 +186,11 @@ sup {
   position: relative;
   vertical-align: baseline;
 }
+
 sub {
   bottom: -0.25em;
 }
+
 sup {
   top: -0.5em;
 }
@@ -194,7 +224,7 @@ button {
 button,
 [type="button"] {
   -webkit-appearance: button;
-  appearance: button;
+  appearance: auto;
 }
 
 /* Remove the inner border and padding in Firefox	*/
@@ -227,6 +257,7 @@ article {
   margin-left: auto;
   margin-right: auto;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   article {
     width: 723px;
@@ -234,6 +265,7 @@ article {
     margin-bottom: calc((100% - 723px) / 2);
   }
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   article {
     width: 933px;
@@ -241,6 +273,7 @@ article {
     margin-bottom: calc((100% - 933px) / 2);
   }
 }
+
 @media only screen and (min-width: 1200px) {
   article {
     width: 1127px;
@@ -274,11 +307,13 @@ article {
   pointer-events: none;
   transition: border-color 0.2s ease-in-out;
 }
+
 @media only screen {
   .page:hover {
     box-shadow: 0 10px 100px 0 rgba(34, 36, 38, 0.3);
   }
 }
+
 @media only screen and (max-width: 767px) {
   .page,
   .page[style^="border-color"] {
@@ -298,11 +333,11 @@ article {
  * https://opensource.org/licenses/MIT
  */
 .grid {
-  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
   padding: 0;
+
   /**
    * Temporary hack to be sure avatar
    * is rendered on print preview
@@ -323,12 +358,11 @@ article {
   justify-content: inherit;
   align-items: stretch;
   width: 100% !important;
-  padding: 0rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 /* Columns */
+
 /* Standard 16 column */
 .grid > .column:not(.row),
 .grid > .row > .column {
@@ -345,6 +379,7 @@ article {
 }
 
 /* Columns */
+
 /* Vertical padding when no rows */
 .grid > .column:not(.row) {
   padding-top: 1rem;
@@ -489,6 +524,7 @@ article {
 .grid > .row > [class*="mobile only"].column {
   display: none;
 }
+
 @media only screen and (max-width: 767px) {
   [class*="mobile only"].grid,
   .grid > [class*="mobile only"].row,
@@ -505,6 +541,7 @@ article {
   align-items: center;
   justify-content: center;
 }
+
 .avatar {
   position: relative;
   width: 140%;
@@ -512,6 +549,7 @@ article {
   display: block;
   flex: 1 0 auto;
 }
+
 @media only screen and (max-width: 1199px) {
   .avatar-wrapper {
     padding: 0;
@@ -598,7 +636,7 @@ article {
   color: #00aff0;
 }
 .contacts li a.telegram:hover {
-  color: #0088cc;
+  color: #08c;
 }
 .contacts li a.phone:hover {
   color: dimgrey;
@@ -622,6 +660,7 @@ article {
     margin-right: 0;
   }
 }
+
 @media only screen and (max-width: 1199px) {
   .contacts {
     margin-top: 1em;
@@ -712,13 +751,13 @@ li.details > input {
 /* Highlighted list item */
 li.highlighted {
   padding: 0.5em;
-  background: rgba(0,0,0,0.04);
+  background: rgba(0, 0, 0, 0.04);
   border-radius: 4px;
 }
 
 /* Bordered list item */
 li.bordered {
-  border: 1px solid rgba(0,0,0,0.125);
+  border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 4px;
   padding: 0.5em;
   transition: all 0.2s linear;
@@ -761,7 +800,7 @@ li.bordered > ul > details > div {
 .tags.bulleted .tag:not(:last-child):after {
   content: "●";
   display: inline-block;
-  font-family: "Arial";
+  font-family: "Arial", serif;
   font-size: 1rem;
   margin: 0 0.25em 0 0.25em;
 }
@@ -948,6 +987,7 @@ dialog:target ~ * {
 .credits:hover {
   opacity: 1;
 }
+
 @media only screen and (max-width: 767px) {
   .credits {
     display: none;
@@ -988,6 +1028,7 @@ footer {
   justify-content: center;
   z-index: 1;
 }
+
 @media only screen and (max-width: 767px) {
   header {
     height: auto;
@@ -1005,6 +1046,7 @@ footer {
     padding: 1em;
   }
 }
+
 @media print {
   header,
   footer {
